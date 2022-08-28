@@ -9,6 +9,11 @@ public class Role {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Enumerated(EnumType.STRING)
     @Column
     private ERole name;
+
+    public ERole getName() {
+        return name;
+    }
 }
