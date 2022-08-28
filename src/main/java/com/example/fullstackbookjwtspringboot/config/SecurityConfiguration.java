@@ -32,21 +32,6 @@ public class SecurityConfiguration {
         this.authTokenFilter = authTokenFilter;
     }
 
-//    @Bean
-//    public InMemoryUserDetailsManager userDetailsService() {
-//        UserDetails user = User.withDefaultPasswordEncoder()
-//                .username("user")
-//                .password("password")
-//                .roles("USER")
-//                .build();
-//        UserDetails user2 = User.withDefaultPasswordEncoder()
-//                .username("user2")
-//                .password("password2")
-//                .roles("USER")
-//                .build();
-//        return new InMemoryUserDetailsManager(user, user2);
-//    }
-
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
